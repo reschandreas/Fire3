@@ -11,6 +11,9 @@ NAME =
 # added by tjt  9-2-2018
 CROSS_COMPILE = aarch64-linux-gnu-
 
+DD = dd
+DEV = /dev/sdc
+
 # *DOCUMENTATION*
 # To see a list of typical targets execute "make help"
 # More info can be located in ./README
@@ -837,10 +840,10 @@ update:
 	cp u-boot.bin ../SDcard
 
 sdcard:
-	dd if=u-boot.bin of=/dev/sdf bs=512 seek=129 conv=fdatasync
+	$(DD) if=u-boot.bin of=$(DEV) bs=512 seek=129 conv=fdatasync
 
 sdzap:
-	dd if=/dev/zero of=/dev/sdf bs=512 seek=129 count=950
+	$(DD) if=/dev/zero of=$(DEV) bs=512 seek=129 count=950
 
 
 PHONY += dtbs

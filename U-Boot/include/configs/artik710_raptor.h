@@ -50,15 +50,14 @@
 /* Not used: not need IRQ/FIQ stuff	*/
 #undef  CONFIG_USE_IRQ
 /* decrementer freq: 1ms ticks */
-#define CONFIG_SYS_HZ				1000
+#define CONFIG_SYS_HZ				    1000
 
 /* board_init_f */
 #define	CONFIG_SYS_SDRAM_BASE			0x40000000
-/* #define	CONFIG_SYS_SDRAM_SIZE			0x3DF00000 */
-#define	CONFIG_SYS_SDRAM_SIZE			0x40000000
+#define	CONFIG_SYS_SDRAM_SIZE			0x80000000
 
 /* dram 1 bank num */
-#define CONFIG_NR_DRAM_BANKS			1
+#define CONFIG_NR_DRAM_BANKS			2
 
 /* relocate_code and  board_init_r */
 #define	CONFIG_SYS_MALLOC_END			(CONFIG_MEM_MALLOC_START + \
@@ -112,7 +111,7 @@
 #undef CONFIG_SYS_PROMPT
 /* Monitor Command Prompt   */
 #define CONFIG_SYS_PROMPTXX			"artik710# "
-#define CONFIG_SYS_PROMPT			"U-boot: fire3 # "
+#define CONFIG_SYS_PROMPT			"U-boot: nanopc-t3 plus# "
 #endif
 /* undef to save memory	   */
 #define CONFIG_SYS_LONGHELP
@@ -155,7 +154,7 @@
 #define CONFIG_S5P_SERIAL_INDEX			0
 #define CONFIG_S5P_SERIAL_CLOCK			50000000
 
-#define CONFIG_BAUDRATE				115200
+#define CONFIG_BAUDRATE				    115200
 #define CONFIG_SYS_BAUDRATE_TABLE \
 		{ 9600, 19200, 38400, 57600, 115200 }
 #define CONFIG_S5P_SERIAL_FLUSH_ON_INIT
@@ -331,7 +330,7 @@
 /*-----------------------------------------------------------------------
  * BOOTCOMMAND
  */
-#define CONFIG_REVISION_TAG
+#define CONFIG_REVISION_TAG         01
 
 #define CONFIG_DEFAULT_CONSOLE		"console=ttySAC3,115200n8\0"
 
