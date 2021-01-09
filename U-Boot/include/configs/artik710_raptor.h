@@ -53,11 +53,11 @@
 #define CONFIG_SYS_HZ				    1000
 
 /* board_init_f */
-#define	CONFIG_SYS_SDRAM_BASE			0x40000000
+#define	CONFIG_SYS_SDRAM_BASE			0x00000000
 #define	CONFIG_SYS_SDRAM_SIZE			0x80000000
 
 /* dram 1 bank num */
-#define CONFIG_NR_DRAM_BANKS			2
+#define CONFIG_NR_DRAM_BANKS			1
 
 /* relocate_code and  board_init_r */
 #define	CONFIG_SYS_MALLOC_END			(CONFIG_MEM_MALLOC_START + \
